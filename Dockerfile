@@ -16,5 +16,5 @@ ENV NODE_ENV production
 COPY . .
 # RUN npm run-script build
 
-EXPOSE 3000
+EXPOSE 8080
 CMD [ "npm", "start" ]

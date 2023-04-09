@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:14
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -15,6 +15,8 @@ ENV NODE_ENV production
 # Bundle app source
 COPY . .
 # RUN npm run-script build
+RUN npm install
+RUN npm run build
 
 EXPOSE 8080
 CMD [ "npm", "start" ]
